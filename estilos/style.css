@@ -1,0 +1,39 @@
+.Contenedor{
+    background-color: rgb(172, 152, 183);
+    border-radius: 10px;
+    height: 200px;
+    margin-inline: 20px;
+    padding-inline: 30px;
+    padding-top: 25px;
+}
+.Contenedor1{
+    background-color: rgb(228, 202, 231);
+    border-radius: 10px;  
+    margin-inline: 20px;
+    padding-inline: 30px;
+    padding-top: 25px; 
+    margin-top: 20px;
+    padding-left: 400px;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+
+    
+    
+}
+.ConIndex{
+    background-color: rgb(172, 152, 183);  
+    border-radius: 10px;  
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 50px;
+    display: flex;
+
+}
+body{
+    background-color: rgb(224, 187, 229);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-inline: 5%;
+}

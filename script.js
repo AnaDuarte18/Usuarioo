@@ -1,10 +1,11 @@
 class Usuario{
-    constructor(nombre, apellido, dni, telefono, correo){
+    constructor(nombre, apellido, dni, telefono, correo, saldo){
         this.nombre = nombre
         this.apellido = apellido
         this.dni = dni
         this.telefono = telefono
         this.correo = correo
+        this.saldo = saldo
     }
     getNombre(){
         return this.nombre;
@@ -21,6 +22,9 @@ class Usuario{
     getCorreo(){
         return this.correo
     }
+    getSaldo(){
+        return this.saldo
+    }
 }
 
 function inicio(){
@@ -34,22 +38,30 @@ const apellido = document.getElementById("apellido").value
 const dni = document.getElementById("dni").value
 const telefono = document.getElementById("telefono").value
 const correo = document.getElementById("correo").value
+const saldo = document.getElementById("saldo").value
 
 function registro(){
-    nuevoUsuario = new Usuario(document.getElementById("nombre").value, document.getElementById("apellido").value, document.getElementById("dni").value, document.getElementById("telefono").value, document.getElementById("correo").value);
+    nuevoUsuario = new Usuario(document.getElementById("nombre").value, document.getElementById("apellido").value, document.getElementById("dni").value, document.getElementById("telefono").value, document.getElementById("correo").value, document.getElementById("saldo").value);
     lista.push(nuevoUsuario);
     mostrarInfo();
 }
 
-
+button.addEventListener('click', () => {
+    if (container.style.display === 'none' || container.style.display === '') {
+        container.style.display = 'block'; 
+    } else {
+        container.style.display = 'none'; 
+    }
+});
 
 function mostrarInfo() {
     if (lista.length > 0) {
-        document.getElementById("nombre").innerHTML = lista[i].getNombre();
-        document.getElementById("apellido").innerHTML = lista[i].getApellido();
-        document.getElementById("dni").innerHTML = lista[i].getDni();
-        document.getElementById("telefono").innerHTML = lista[i].getTelefono();
-        document.getElementById("correo").innerHTML = lista[i].getCorreo();
+        document.getElementById("nombreInfo").innerHTML = lista[i].getNombre();
+        document.getElementById("apellidoInfo").innerHTML = lista[i].getApellido();
+        document.getElementById("dniInfo").innerHTML = lista[i].getDni();
+        document.getElementById("telefonoInfo").innerHTML = lista[i].getTelefono();
+        document.getElementById("correoInfo").innerHTML = lista[i].getCorreo();
+        document.getElementById("saldoInfo").innerHTML = lista[i].getSaldo();
     }else{
         alert("No hay personas");
     }
